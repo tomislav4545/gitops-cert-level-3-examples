@@ -29,6 +29,7 @@ spec:
       # Destination cluster and namespace to deploy the application
       destination:
         name: cluster-2
+        namespace: '{{index .path.segments 2}}-{{index .path.segments 4}}'
 
       # Sync policy
       syncPolicy:
