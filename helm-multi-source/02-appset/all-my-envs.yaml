@@ -50,7 +50,7 @@ spec:
 
       sources:
         - repoURL: https://kostis-codefresh.github.io/multi-sources-example
-          path: my-chart
+          chart: my-chart
           targetRevision: '0.1.0'
           helm:
             valueFiles:
