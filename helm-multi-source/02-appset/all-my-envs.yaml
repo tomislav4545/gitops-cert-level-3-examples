@@ -49,16 +49,16 @@ spec:
       project: default
 
       sources:
-        - repoURL: https://github.com/tomislav4545/gitops-cert-level-3-examples.git
-          path: helm-multi-source/my-chart
-          targetRevision: HEAD
+        - repoURL: https://kostis-codefresh.github.io/multi-sources-example
+          path: my-chart
+          targetRevision: '0.1.0'
           helm:
             valueFiles:
-            - $values/helm-multi-source/my-values/common-values.yaml          
-            - $values/helm-multi-source/my-values/app-version/{{.version}}-values.yaml               
-            - $values/helm-multi-source/my-values/env-type/{{.type}}-values.yaml  
-            - $values/helm-multi-source/my-values/regions/{{.region}}-values.yaml                
-            - $values/helm-multi-source/my-values/envs/{{.env}}-values.yaml
+            - $values/my-values/common-values.yaml
+            - $values/my-values/app-version/{{.version}}-values.yaml
+            - $values/my-values/env-type/{{.type}}-values.yaml
+            - $values/my-values/regions/{{.region}}-values.yaml
+            - $values/my-values/envs/{{.env}}-values.yaml
         - repoURL: 'https://github.com/tomislav4545/gitops-cert-level-3-examples.git'
           targetRevision: HEAD
           ref: values
